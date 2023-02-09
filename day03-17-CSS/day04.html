@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1:link {
+      color: rgb(27, 123, 207);
+    }
+
+    .box1:visited {
+      color: aqua;
+    }
+    .box1:focus {
+      color: yellow;
+    }
+    .box:hover {
+      color: brown;
+    }
+    .box:active {
+      color:skyblue;
+    }
+    .box2:hover {
+      color: greenyellow;
+    }
+    .box-cab::before {
+      /* 为具体内容添加 */
+      content: "yes";
+      background-color: #ff4400;
+    }
+    .item::before {
+      /* 添加工具，哪个元素需要添加直接添加item类即可 */
+      content: "you need some apples";
+      background-color: #ff4400;
+    }
+  </style>
+</head>
+<body>
+  <div class="box-cab">我有一颗白菜，I have a cabbage</div>
+  <div class="box">i am a div element，试试中文会有什么效果</div>
+  <div>
+    <div id="box-one">
+      <span class="demo">你好，世界</span>好好学习，天天向上。
+    </div>
+    <a class="box1" href="https://www.baidu.com">百度一下</a>
+    <a class="box2" href="https://www.taobao.com">淘宝一下</a>
+    <a class="box3" href="https://www.jd.com">京东一下</a>
+    <a class="box4" href="https://www.mi.com">进入小米</a>
+  </div>
+  <input class="box-one" type="text">
+
+
+
+</body>
+</html>

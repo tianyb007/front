@@ -1,0 +1,95 @@
+/* ul > li {
+  margin-top: 1px;
+} */
+
+
+ul > li > a {
+  display: inline-block;
+}
+
+ul > li > a:hover {
+  color: #f04142;
+}
+
+
+
+ul > li .ranking {
+  display: inline-block;
+  color: #999;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+/* ul > li .ranking .one {
+  color: red;
+} */
+
+/* 使用结构伪类的方法写 */
+ul > li:nth-child(1) .ranking {
+  color: red;
+}
+
+ul > li:nth-child(2) .ranking {
+  color: greenyellow;
+}
+
+ul > li:nth-child(3) .ranking {
+  color: orange;
+}
+
+/* set icon */
+ul > li .icon {
+  position: relative;
+  top: 3px;
+  left: 5px;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  /* background-image: url(../day07新闻列表demo/images/newicon.svg); */
+  
+}
+
+ul > li .new {
+  background-image: url(../day07新闻列表demo/images/newicon.svg);
+}
+
+ul > li .hot {
+  background-image: url(../day07新闻列表demo/images/hoticon.svg);
+}
+
+
+ul > li .content {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
