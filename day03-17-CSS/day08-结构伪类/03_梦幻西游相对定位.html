@@ -6,33 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    body {
+    body{
       margin: 0;
       padding: 0;
     }
     .box {
       
       overflow: hidden;
-      height: 600px;
+      height: 489px;
       background-color: #f00;
       /* margin-left: 25%; */
     }
     .content {
       position: relative;
-      left: -800px;
-      /* overflow: hidden; */
-      /* height: auto; */
-      
-      
-      /* right: 1650px; */
-      /* transform: translate(50%); */
+      left: -960px;
+      /* 向左移动图片的一半 */
+      /* transform: translate(-50); */
+      /* transform中的百分比是相对于自己 */
       margin-left: 50%;
     }
   </style>
 </head>
 <body>
   <div class="box">
-    <img class="content" src="../images/英雄联盟.jfif" alt="">
+    <img class="content" src="../images/mhxy.jpg" alt="">
   </div>
 </body>
 </html>
