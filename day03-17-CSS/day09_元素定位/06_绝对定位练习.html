@@ -1,0 +1,44 @@
+<!-- 需求是把strong元素在父元素的左下角，父元素在上一级元素的右下角。 -->
+<!-- 总共是3级元素，根据绝对定位和相对定位就可以搞定了。 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div.container {
+      position: relative;
+      background-color: red;
+      width: 1000px;
+      height: 600px;
+    }
+    div.box {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: green;
+      width: 600px;
+      height: 300px;
+    }
+    strong.item1 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="../images/Juptier.jpg" alt="">
+    <div class="box">
+      <span class="item">我是span元素</span>
+      <strong class="item1">我是strong元素</strong>
+      
+    </div>
+  </div>
+  
+</body>
+</html>
