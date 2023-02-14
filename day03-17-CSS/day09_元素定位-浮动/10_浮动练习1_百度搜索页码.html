@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    body, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 样式重置 */
+    ul, li {
+      list-style: none;
+      line-height: normal;
+      margin-top: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      display: inline-block;
+      
+    }
+
+    
+/* 内容样式 */
+    ul > li {
+      float: left;
+      /* background-color: #fff; */
+      margin-left: 12px;
+      
+    }
+
+    
+
+    ul > li > a {
+      width: 36px;
+      height: 36px;
+      /* color: rgb(57,81,179); */
+      text-align: center;
+      line-height: 36px;
+      border-radius: 6px;
+      background-color: #fff;
+      color: #3951b3;
+      font-size: 14px;
+    }
+
+
+
+
+
+    ul > li >a:hover {
+      cursor: pointer;
+      background-color: #5772db;
+      color: #fff;
+    }
+    ul > li.active > a {
+      background-color: #5772db;
+      color: #fff;
+    }
+    ul > li.text > a {
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="item active"><a href="#">1</a></li>
+    <li class="item"><a href="#">2</a></li>
+    <li class="item"><a href="#">3</a></li>
+    <li class="item"><a href="#">4</a></li>
+    <li class="item"><a href="#">5</a></li>
+    <li class="item"><a href="#">6</a></li>
+    <li class="item"><a href="#">7</a></li>
+    <li class="item"><a href="#">8</a></li>
+    <li class="item"><a href="#">9</a></li>
+    <li class="item"><a href="#">10</a></li>
+    <li class="item text"><a href="#">下一页&gt;</a></li>
+  </ul>
+</body>
+</html>
