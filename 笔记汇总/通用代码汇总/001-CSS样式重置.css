@@ -1,0 +1,53 @@
+/* 全局去除默认样式 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* a标签去除样式 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ul 和 li 去除样式 */
+ul, li {
+  list-style: none;
+}
+
+/* h，标题元素去除样式 */
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

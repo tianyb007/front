@@ -6,9 +6,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./reset.css">
-  
+  <link rel="stylesheet" href="./common.css">
+  <style>
+    .ai-dress {
+      /* background-color: orange; */
+      margin-top: 30px;
+    }
+
+    .ai-dress .header {
+      height: 58px;
+      line-height: 58px;
+    }
+    .ai-dress .header .left-area {
+      float: left;
+      font-weight: normal;
+    }
+    .ai-dress .header .right-area {
+      float: right;
+      
+      font-size: 18px;
+
+    }
+
+    .ai-dress .header .right-area .item {
+      margin-right: 15px;
+    }
+    .ai-dress .header .right-area .item:hover {
+      padding: 3px 0;
+      text-decoration: solid;
+      border-bottom: 3px solid red;
+      color: red;
+    }
+
+
+
+    /* 下面的整体布局 */
+    .ai-dress .list {
+      height: 614px;
+      /* background-color: #f40; */
+    }
+    .list .box {
+      margin-right: -14px;
+    }
+    .list .box .item {
+      float: left;
+    }
+    .ai-dress .list .box .item {
+      height: 300px;
+      width: 234px;
+      margin-right: 14px;
+      margin-bottom: 14px;
+      background-color: orange;
+      transition: all 0.2s ease-in;
+    }
+    .ai-dress .list .box .item1 {
+      height: 614px;
+    }
+    .ai-dress .list .box .item9, 
+    .ai-dress .list .box .item10{
+      height: 143px;
+    }
+    .ai-dress .list .box .item:hover {
+      box-shadow: 0 15px 30px rgba(0,0,0,50%);
+      transform: translateY(-2px);
+    }
+    .ai-dress .list .box a {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+
+
+
+  </style>
 </head>
 <body>
-  
+  <!-- 这是整个布局的一部分 -->
+  <div class="clear_fix mi_wrapper ai-dress">
+    <!-- header部分表示是上面的标题部分 -->
+    <div class="header">
+      <!-- left-area表示是左边的智能穿戴 -->
+      <h3 class="left-area">智能穿戴</h3>
+      <!-- right-area表示是右边的两个小按钮 -->
+      <div class="right-area">
+        <a class="item headset" href="*">耳机</a>
+        <a class="item dress" href="*">穿戴</a>
+      </div>
+    </div>
+    <!-- list表示下面的布局 -->
+    <div class="list">
+      <ul class="box">
+        <li class="item item1"><a href="*">1</a></li>
+        <li class="item item2"><a href="*">2</a></li>
+        <li class="item item3"><a href="*">3</a></li>
+        <li class="item item4"><a href="*">4</a></li>
+        <li class="item item5"><a href="*">5</a></li>
+        <li class="item item6"><a href="*">6</a></li>
+        <li class="item item7"><a href="*">7</a></li>
+        <li class="item item8"><a href="*">8</a></li>
+        <li class="item item9"><a href="*">9</a></li>
+        <li class="item item10"><a href="*">10</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
