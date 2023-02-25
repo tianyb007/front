@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +9,11 @@ body {
 
 
 
+/* a标签去除样式 */
+a {
+  text-decoration: none;
+  color: #333;
+}
 
 
 

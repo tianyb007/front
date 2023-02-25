@@ -1,0 +1,45 @@
+.top {
+  background-color: #242424;
+}
+
+
+
+
+
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 70px;
+  width: 1100px;
+  height: 70px;
+  background-color: #f40;
+  margin: 0 auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
