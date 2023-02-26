@@ -3,6 +3,13 @@
 }
 
 body {
+  font: 12px Arial, Helvetica, sans-serif;
+}
+
+
+
+
+body, h1, h2, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -13,14 +20,20 @@ body {
 a {
   text-decoration: none;
   color: #333;
+  outline: none;
 }
 
 
 
+ul, li {
+  list-style: none;
+}
 
 
-
-
+input {
+  outline: none;
+  border: none;
+}
 
 
 

@@ -1,20 +1,29 @@
-warpper_01 {
+/* 上面topbar的宽度，实际应该不止1100 */
+.warpper_01 {
   width: 1100px;
   margin: 0 auto;
   background-color: #242424;
 
 }
 
-
-warpper_02 {
+/* topbar下面的导航栏的宽度 */
+.warpper_02 {
   width: 980px;
   margin: 0 auto;
 }
 
+/* 导入精灵图 */
+.topbar_sprite {
+  display: inline-block;
+  background-image: url(../images/topbar.png);
+}
 
-
-
-
+/* incon-hot的位置 */
+.topbar_icon_hot {
+  width: 28px;
+  height: 19px;
+  background-position: -190px 0;
+}
 
 
 
