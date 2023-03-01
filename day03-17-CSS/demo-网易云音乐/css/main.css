@@ -170,11 +170,19 @@
 
 
 
+/* 给导航栏做样式 */
+.nav {
+  height: 35px;
+  line-height: 35px;
+  box-sizing: border-box;
+  background-color: #C20C0C;
+  border-bottom: 1px solid #a40011;
+}
 
 
-
-
-
+.navbar {
+  background-color: #30c260;
+}
 
 
 
