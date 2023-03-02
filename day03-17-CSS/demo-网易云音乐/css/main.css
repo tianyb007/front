@@ -181,12 +181,41 @@
 
 
 .navbar {
-  background-color: #30c260;
+  /* background-color: #30c260; */
+  box-sizing: border-box;
+  padding-left: 180px;
+  background-color: #C20C0C;
+  
+
 }
 
 
+/* 给导航栏做flex布局 */
+.navbar .list {
+  display: flex;
+}
 
 
+.navbar .list .item {
+  display: inline-block;
+}
 
+
+.navbar .list .item span {
+  display: inline-block;
+  height: 20px;
+  padding: 0 13px;
+  margin: 0 17px 0;
+  border-radius: 20px;
+  color: #fff;
+  line-height: 21px;
+  
+}
+
+
+.navbar .list .item span:hover,
+.navbar .list .item.active span {
+  background-color: #9B0909;
+}
 
 
