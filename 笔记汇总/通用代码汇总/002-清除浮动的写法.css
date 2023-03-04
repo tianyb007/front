@@ -1,0 +1,13 @@
+.clear_fix::after {
+  content: "";
+  display: block;
+  clear: both;
+  /* 浏览器的兼容 */
+  visibility: hidden;
+  height: 0;
+}
+.clear_fix {
+  /* 兼容IE6 7 */
+  *zoom: 1; 
+  /* 不进行缩放 */
+}
