@@ -11,19 +11,35 @@
     .banner {
       height: 258px;
       background-color: orange;
-      /* background: url(./images/banner-bg-02.jpg) center center / 6000px; */
+      background: url(./images/banner-bg-02.jpg) center center / 6000px;
 
-      background-image: url("http://p1.music.126.net/5SH4s94JBXKfiJxpbrhJuA==/109951168437745274.jpg?imageView&blur=40x20"); background-size: 6000px; background-position: center center;
-
+      /* background-image: url("http://p1.music.126.net/5SH4s94JBXKfiJxpbrhJuA==/109951168437745274.jpg?imageView&blur=40x20"); background-size: 6000px; background-position: center center; */
     }
-
+/* 设置整体区域的高度 */
     .area {
-      width: 958px;
-      margin: 0 auto;
+      position: relative;
+      height: 258px;
+      background-color: orange;
       /* background-color: orange; */
     }
-    .area .area-left .img-list {
+
+    /* 设置左边区域的大小 */
+    .area .area-left {
+      position: relative;
       width: 730px;
+    }
+
+
+
+    .area .area-left .img-list {
+      display: flex;
+      overflow: hidden;
+    }
+
+    .area .area-left .img-list li {
+      flex-shrink: 0;
+      width: 100%;
+      
     }
 
     .area .img-list .item {
@@ -36,6 +52,12 @@
       height: 258px;
     }
 
+
+    /* 设置右边的区域 */
+    .area .area-right {
+      background-color: orange;
+    }
+
   </style>
 </head>
 <body>
@@ -43,6 +65,21 @@
     <div class="area wrapper_03">
       <div class="area-left">
         <ul class="img-list">
+          <li>
+            <a class="item" href="#">
+              <img src="./images/banner-bg-01.jpg" alt="">
+            </a>
+          </li>
+          <li>
+            <a class="item" href="#">
+              <img src="./images/banner-bg-01.jpg" alt="">
+            </a>
+          </li>
+          <li>
+            <a class="item" href="#">
+              <img src="./images/banner-bg-01.jpg" alt="">
+            </a>
+          </li>
           <li>
             <a class="item" href="#">
               <img src="./images/banner-bg-01.jpg" alt="">
