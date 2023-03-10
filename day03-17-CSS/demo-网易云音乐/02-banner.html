@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/common.css">
   <style>
     .banner {
-      height: 258px;
+      height: 285px;
       background-color: orange;
       background: url(./images/banner-bg-02.jpg) center center / 6000px;
 
@@ -18,8 +18,7 @@
 /* 设置整体区域的高度 */
     .area {
       position: relative;
-      height: 258px;
-      background-color: orange;
+      height: 285px;
       /* background-color: orange; */
     }
 
@@ -28,7 +27,6 @@
       position: relative;
       width: 730px;
     }
-
 
 /* 轮播图的图片列表 */
     .area .area-left .img-list {
@@ -39,7 +37,6 @@
     .area .area-left .img-list li {
       flex-shrink: 0;
       width: 100%;
-      
     }
 
     .area .img-list .item {
@@ -49,7 +46,7 @@
 
     .area .img-list .item img {
       width: 100%;
-      height: 258px;
+      height: 285px;
     }
 
 /* 点的列表 */
@@ -63,36 +60,86 @@
   justify-content: center;
   
 }
-/* 圆点之间的间距是由li造成的 */
+/* 圆点之间的间距是由li造成的，设置li的margin */
 .banner .area-left .dots-list li {
   margin: 0 2px;
 }
 
+/* 给小圆点设置背景图片 */
 .banner .area-left .dots-list .item {
-  
   display: inline-block;
-  
   width: 20px;
   height: 20px;
-  background: url(./images/banner-bg-03.png) 0 9999px no-repeat;
+  background: url(./images/banner-bg-03.png) no-repeat;
   background-position: 3px -343px;
   
+
+
+  /* 设置聚焦的变化 */
 }
 .banner .area-left .dots-list .item.active,
 .banner .area-left .dots-list .item:hover {
-  background: url(./images/banner-bg-03.png) 0 9999px no-repeat;
-  background-position: -16px -343px;
+  background: url(./images/banner-bg-03.png) no-repeat -16px -343px;
+  /* background-position: -16px -343px; */
 }
-
-
-
-
 
     /* 设置右边的区域 */
     .area .area-right {
-      background-color: orange;
+      position: absolute;
+      right: -1px;
+      top: 0;
+      bottom: 0;
+      width: 254px;
+      background-image: url(./images/04-download.png);
+      /* background-color: orange; */
+    }
+    .area .area-right .down {
+      display: block;
+      width: 215px;
+      height: 56px;
+      margin: 186px 0 0 19px;
+      text-indent: -9999px;
+      
+    }
+    .area .area-right .down:hover{
+      background-image: url(./images/04-download.png);
+      background-position: 0 -290px;
     }
 
+    .area .area-right p {
+      color: #8d8d8d;
+      margin: 10px;
+      text-align: center;
+    }
+
+/* 设置控制轮播图的两个按钮 */
+    .area .control {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      width: 37px;
+      height: 63px;
+      background-image: url(./images/banner-bg-03.png);
+
+    }
+    .area .control-left {
+      left: 0;
+      margin-left: -70px;
+      background-position: 0 -360px;
+/* 设置背景图的位置时，记住前面的bg */
+    }
+    .area .control-right {
+      right: 0;
+      margin-right: -70px;
+      background-position: 0 -508px;
+    }
+    .area .control-left:hover {
+      background-position: 0 -430px;
+    }
+    .area .control-right:hover {
+      background-position: 0 -578px;
+    }
   </style>
 </head>
 <body>
@@ -134,7 +181,12 @@
         </ul>
           
       </div>
-      <div class="area-right"></div>
+      <div class="area-right">
+        <a class="down" href="#">下载客户端</a>
+        <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+      </div>
+      <a href="#" class="control control-left"></a>
+      <a href="#" class="control control-right"></a>
     </div>
   </div>
 </body>
