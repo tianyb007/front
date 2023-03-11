@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr = [2,65,4,2,6,7,898,5,3,44]
+    var tem = []
+    // var i, j
+    //不先写这个也是正确的。
+    for (i = 0; i < arr.length; i++) {
+      for (j = 0; j < arr.length; j++) {
+        if (arr[j] > arr[j+1]) {
+          tem = arr[j]
+          arr[j] = arr[j+1]
+          arr[j+1] =tem
+        }
+      }
+    }
+    console.log(arr)
+  </script>
+</body>
+</html>
