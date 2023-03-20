@@ -1,5 +1,6 @@
 function createCalendar(year, month) {
   const date = new Date(year, month - 1)
+  console.log(date);
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
   const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Element</title>
+  
+</head>
+<body>
+  <ul id="demo">
+    <li>列表1</li>
+    <li>列表2</li>
+  </ul>
+  <button onclick="addElement()">点击增加列表</button>
+  <script>
+    function addElement() {
+      var newElement = document.createElement("li");
+      newElement.innerHTML = "新增列表";
+      document.getElementById("demo").appendChild(newElement);
+    }
+  </script>
+  
+</body>
+</html>

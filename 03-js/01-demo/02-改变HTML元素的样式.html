@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo">我是一只小小鸟</p>
+  <button onclick="changeStyle()">点击改变样式</button>
+  <button onclick="fresh()">刷新</button>
+  <script>
+    function changeStyle() {
+      document.getElementById("demo").style.color="orange";
+      document.getElementById("demo").style.fontSize="36px";
+
+    }
+    function fresh() {
+      document.getElementById("demo").style.color="black";
+      document.getElementById("demo").style.fontSize="1em";
+    }
+  </script>
+</body>
+</html>
