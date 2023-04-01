@@ -17,7 +17,12 @@
 学无止境，加油吧
 
 
+### 学习资料
 
+coderwhy的课程
+JavaScript红宝书，第四版
+阮一峰老师的JavaScript入门教程、ES6标准入门
+CSS新世界
 
 
 
