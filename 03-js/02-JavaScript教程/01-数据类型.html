@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    原始值 number boolean string 
+    引用值 object array Date 
+    复杂对象 null undefined
+   -->
+  <script>
+    function f() {}
+    console.log(typeof 123);    //number
+    console.log(typeof "ture"); //string
+    console.log(typeof true);   //boolean
+    console.log(typeof f);      //function
+    console.log(typeof []);     //object
+    console.log(typeof {});     //object
+    //数组是一种特殊的对象
+    //instanceof运算符可以区分数组和对象
+    console.log(typeof null);   //object
+    console.log(typeof NaN);   //number
+  </script>
+
+  <!-- null和undefined -->
+  <!-- 
+    null是表示空的意思，转为数值的时候为0，undefined表示未定义状态，转为数值为NaN
+   -->
+   <script>
+    //js内部没有整数，表示范围在2^53次方之内
+   </script>
+</body>
+</html>

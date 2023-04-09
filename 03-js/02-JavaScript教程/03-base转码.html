@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function b64Encode(str) {
+      return btoa(encodeURIComponent(str));
+    }
+    function b64Decode(str) {
+      return decodeURIComponent(atob(str));
+    }
+    
+    console.log(b64Encode('你好'));//JUU0JUJEJUEwJUU1JUE1JUJE
+    console.log(b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE'));
+  </script>
+</body>
+</html>
