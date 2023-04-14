@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2><span class="counter">当前计数: 0</span></h2>
+  <button class="add">+1</button>
+  <button class="sub">-1</button>
+  <script>
+    //获取dom
+    const title2 = document.querySelector("h2")
+    const num = document.querySelector(".counter")
+    const addfun =document.querySelector(".add")
+    const sunfun = document.querySelector(".sub")
+    //设变量记录数据的变化
+    let counter = 100
+    num.textContent = counter
+    //监听按钮的点击事件
+    //
+    addfun.onclick = function() {
+      counter++
+      num.textContent = counter
+    }
+    sunfun.onclick = function() {
+      counter--
+      num.textContent = counter
+    }
+  </script>
+</body>
+</html>
