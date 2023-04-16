@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div v-memo="[name]">
+      <h2>姓名: {{ name }}</h2>
+      <h2>年龄: {{ age }}</h2>
+      <h2>身高: {{ height }}</h2>
+
+    </div>
+    <button @click="changeInfo">修改内容</button>
+  </div>
+  <!-- v-mome的功能有点类似于react里面的memo函数，起到一个性能优化的作用，在指定元素变化时才重新渲染该节点 -->
+  <script src="../vue.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data: function() {
+        return {
+          name:"hello data",
+          age: 18,
+          height:122
+        }
+      },
+      methods: {
+        changeInfo:function() {
+          this.name = "vue"
+          console.log(this.name)
+          this.age = 19
+          console.log(this.age)
+          // this.height = 123
+        }
+      }
+    }).mount("#app")
+  </script>
+</body>
+</html>
