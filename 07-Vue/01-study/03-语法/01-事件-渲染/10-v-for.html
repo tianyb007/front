@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        margin-top: 10px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 遍历简单数组 -->
+      <h2>电影列表</h2>
+      <ul>
+        <li v-for="movie in movies">{{ movie }}</li>
+      </ul>
+      <!-- 遍历数组和索引 -->
+      <h2>电影列表</h2>
+      <ul>
+        <li v-for="(movie, index) in movies">{{ index +1 }}、 {{ movie }}</li>
+      </ul>
+      <div class="item" v-for="pro in products">
+        <h3>商品: {{ pro.name }}</h3>
+        <span>价格：{{ pro.price }}</span>
+        <p>描述：{{ pro.desc }}</p>
+      </div>
+      <div v-for="(value, key, index) in infos">
+        {{ value }} - {{ key }} - {{ index }}
+      </div>
+    </div>
+
+    <script src="../../vue.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            movies: [
+              "hello data",
+              "星际穿越",
+              "星际迷航",
+              "三体",
+              "罗密欧与朱丽叶",
+            ],
+            products: [
+              { name: "macbook", price: 9.9, desc: "9.9限时抢购，快来" },
+              { name: "mac", price: 9.9, desc: "9.9限时抢购，快来" },
+              { name: "book", price: 9.9, desc: "9.9限时抢购，快来" },
+            ],
+            infos: {
+              name: "coder",
+              age: 18,
+              height: 188,
+              tel: 123143,
+              color: "orange",
+            },
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

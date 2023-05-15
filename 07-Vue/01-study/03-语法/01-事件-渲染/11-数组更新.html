@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        margin-top: 10px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 遍历简单数组 -->
+      <h2>电影列表</h2>
+      <ul>
+        <li v-for="movie in movies" :key="movie">{{ movie }}</li>
+      </ul>
+      <!-- 遍历数组和索引 -->
+      <h2>电影列表</h2>
+      <ul>
+        <li v-for="(movie, index) in movies">{{ index +1 }}、 {{ movie }}</li>
+      </ul>
+      <button @click="changeArr">修改盲盒</button>
+      </div>
+      
+    </div>
+
+    <script src="../../vue.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            movies: [
+              "hello data",
+              "星际穿越",
+              "星际迷航",
+              "三体",
+              "罗密欧与朱丽叶",
+            ],
+            products: [
+              { name: "macbook", price: 9.9, desc: "9.9限时抢购，快来" },
+              { name: "mac", price: 9.9, desc: "9.9限时抢购，快来" },
+              { name: "book", price: 9.9, desc: "9.9限时抢购，快来" },
+            ],
+            infos: {
+              name: "coder",
+              age: 18,
+              height: 188,
+              tel: 123143,
+              color: "orange",
+            },
+          };
+        },
+        methods:{
+          changeArr() {
+            // this.movies.pop()
+            // this.movies.push("--very nice")
+            // this.movies.sort()
+
+            // 不修改原数组不能被侦听，需要重新赋值
+            const newArr = this.movies.map(movie => movie + ' -- very nice')
+            this.movies = newArr
+          }
+        }
+      }).mount("#app");
+    </script>
+  </body>
+</html>

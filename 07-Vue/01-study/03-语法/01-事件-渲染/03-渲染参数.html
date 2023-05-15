@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="box">
+        <button @click.stop="divClick">button</button>
+      </div>
+    </div>
+
+    <script src="../../vue.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data: function () {
+          return {
+            message: "hello data",
+          };
+        },
+        methods: {
+          divClick() {
+            console.log("divClick");
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
