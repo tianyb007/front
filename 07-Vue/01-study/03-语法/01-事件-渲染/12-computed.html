@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{ reverseData }}</h2>
+      <h2>{{ getFullname }}</h2>
+      <h2>{{ scoreLevel }}</h2>
+    </div>
+
+    <script src="../../vue.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: "hello data",
+            lastName: "kobe",
+            firstName: "bryant",
+            score: 80,
+          };
+        },
+        computed: {
+          getFullname() {
+            return this.firstName + " " + this.lastName;
+          },
+          scoreLevel() {
+            return this.score >= 80 ? "及格" : "不及格";
+          },
+          reverseData() {
+            return this.message.split(" ").reverse().join(" ");
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

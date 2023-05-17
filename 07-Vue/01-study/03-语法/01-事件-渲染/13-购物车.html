@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        text-align: center;
+      }
+      tr,
+      th,
+      td {
+        background-color: #f4f4f4;
+        border: solid 1px;
+        padding: 8px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <template v-if="books.length">
+        <table>
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>书籍名称</th>
+              <th>出版日期</th>
+              <th>价格</th>
+              <th>购买数量</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in books" :key="item.id">
+              <td>{{index + 1}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.date}}</td>
+              <td>￥{{item.price}}</td>
+              <td>
+                <button :disabled="item.count <= 0" @click="subCount(item)">
+                  -
+                </button>
+                {{item.count}}
+                <button @click="addCount(item)">+</button>
+              </td>
+              <td>
+                <button @click="moveBook(index)">移除</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>总价：¥{{ totalPrice }}</h2>
+      </template>
+      <template v-else>
+        <h2>购物车空空如也，去选一些你喜欢读的书吧</h2>
+        <span>点击下方链接即可</span>
+      </template>
+    </div>
+
+    <script src="../../vue.js"></script>
+    <script src="./data.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            books,
+          };
+        },
+        computed: {
+          totalPrice() {
+            let price = 0;
+            for (const item of this.books) {
+              price += item.price * item.count;
+            }
+            return price;
+          },
+        },
+        methods: {
+          addCount(item) {
+            // this.book[index].count++
+            // 如果传入的参数的索引
+            item.count++;
+          },
+          subCount(item) {
+            item.count--;
+          },
+          moveBook(index) {
+            this.books.splice(index, 1);
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
